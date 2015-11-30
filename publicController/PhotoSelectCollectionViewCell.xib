@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoSelectCollectionViewCell" id="gTV-IL-0wX" customClass="PhotoSelectCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9c-uM-fJI">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checked-Active.png" translatesAutoresizingMaskIntoConstraints="NO" id="P1b-Dy-wvu">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="Bct-KG-p2e">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="height" constant="25" id="fHu-zq-P1N">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Bct-KG-p2e"/>
+                                <exclude reference="fHu-zq-P1N"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Bct-KG-p2e"/>
+                                <include reference="fHu-zq-P1N"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="t9c-uM-fJI" secondAttribute="bottom" id="NXj-6p-Jvv"/>
+                <constraint firstItem="t9c-uM-fJI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Odg-5M-8Vb"/>
+                <constraint firstAttribute="trailing" secondItem="t9c-uM-fJI" secondAttribute="trailing" id="T4z-Yo-Yok"/>
+                <constraint firstAttribute="trailing" secondItem="P1b-Dy-wvu" secondAttribute="trailing" constant="13" id="WT1-8J-Jn8">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="t9c-uM-fJI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WqA-fh-3ce"/>
+                <constraint firstItem="P1b-Dy-wvu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="prR-sy-2eE">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="t9c-uM-fJI"/>
+                    <exclude reference="P1b-Dy-wvu"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="WT1-8J-Jn8"/>
+                    <exclude reference="prR-sy-2eE"/>
+                    <exclude reference="NXj-6p-Jvv"/>
+                    <exclude reference="Odg-5M-8Vb"/>
+                    <exclude reference="T4z-Yo-Yok"/>
+                    <exclude reference="WqA-fh-3ce"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="t9c-uM-fJI"/>
+                    <include reference="P1b-Dy-wvu"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="WT1-8J-Jn8"/>
+                    <include reference="prR-sy-2eE"/>
+                    <include reference="NXj-6p-Jvv"/>
+                    <include reference="Odg-5M-8Vb"/>
+                    <include reference="T4z-Yo-Yok"/>
+                    <include reference="WqA-fh-3ce"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="photoImage" destination="t9c-uM-fJI" id="wKc-YM-MMR"/>
+                <outlet property="selectImage" destination="P1b-Dy-wvu" id="dvl-Ho-PXu"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Checked-Active.png" width="40" height="40"/>
+    </resources>
+</document>

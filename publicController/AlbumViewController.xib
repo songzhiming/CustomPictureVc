@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController">
+            <connections>
+                <outlet property="albumTableView" destination="SNM-uY-GgU" id="utn-Bn-2e8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-uY-GgU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JGK-Z0-rG7"/>
+                        <outlet property="delegate" destination="-1" id="gmC-1G-2DU"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SNM-uY-GgU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gah-kU-P2n"/>
+                <constraint firstItem="SNM-uY-GgU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JHP-xF-a6L"/>
+                <constraint firstAttribute="trailing" secondItem="SNM-uY-GgU" secondAttribute="trailing" id="O4S-f5-Y1V"/>
+                <constraint firstAttribute="bottom" secondItem="SNM-uY-GgU" secondAttribute="bottom" id="gjg-tf-Sbc"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="SNM-uY-GgU"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Gah-kU-P2n"/>
+                    <exclude reference="JHP-xF-a6L"/>
+                    <exclude reference="O4S-f5-Y1V"/>
+                    <exclude reference="gjg-tf-Sbc"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="SNM-uY-GgU"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Gah-kU-P2n"/>
+                    <include reference="JHP-xF-a6L"/>
+                    <include reference="O4S-f5-Y1V"/>
+                    <include reference="gjg-tf-Sbc"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
